@@ -1,0 +1,24 @@
+from pathlib import Path
+BASE = Path('C:\\Users\\X\\Desktop\\X\\seg')
+BG = 0
+ROAD = 1
+WATER = 2
+FOREST = 3
+UNIFIED_NAMES = {BG: 'background', ROAD: 'road', WATER: 'water', FOREST: 'forest'}
+RAW = BASE / 'datasets'
+AEROSCAPES = RAW / 'aeroscapes-DatasetNinja'
+UAVID = RAW / 'uavid-DatasetNinja'
+FLOODNET = RAW / 'FloodNet' / 'FloodNet-Supervised_v1.0'
+VDD = RAW / 'VDD'
+SEMDRONE = RAW / 'semantic_drone_dataset'
+HARMONIZED_IMAGES = BASE / 'harmonized' / 'images'
+HARMONIZED_MASKS = BASE / 'harmonized' / 'masks'
+AERO_UNIFIED = {'road': ROAD, 'vegetation': FOREST}
+AERO_BG_DEFAULT = BG
+UAVID_UNIFIED = {'road': ROAD, 'tree': FOREST, 'low vegetation': FOREST}
+UAVID_BG_DEFAULT = BG
+FLOODNET_UNIFIED = {0: BG, 1: BG, 2: BG, 3: ROAD, 4: ROAD, 5: WATER, 6: FOREST, 7: BG, 8: WATER, 9: BG}
+VDD_UNIFIED = {0: BG, 1: BG, 2: ROAD, 3: FOREST, 4: BG, 5: BG, 6: WATER}
+SEMDRONE_UNIFIED = {'paved-area': ROAD, 'dirt': ROAD, 'gravel': ROAD, 'water': WATER, 'pool': WATER, 'vegetation': FOREST, 'tree': FOREST, 'bald-tree': FOREST}
+SEMDRONE_BG_DEFAULT = BG
+DATASET_SPLITS = {'aeroscapes': {'train': (AEROSCAPES / 'train', 'img', 'ann'), 'val': (AEROSCAPES / 'val', 'img', 'ann')}, 'uavid': {'train': (UAVID / 'train', 'img', 'ann'), 'val': (UAVID / 'val', 'img', 'ann'), 'test': (UAVID / 'test', 'img', 'ann')}, 'floodnet': {'train': (FLOODNET / 'train', 'train-org-img', 'train-label-img'), 'val': (FLOODNET / 'val', 'val-org-img', 'val-label-img'), 'test': (FLOODNET / 'test', 'test-org-img', 'test-label-img')}, 'vdd': {'train': (VDD / 'train', 'src', 'gt'), 'val': (VDD / 'val', 'src', 'gt'), 'test': (VDD / 'test', 'src', 'gt')}, 'semdrone': {'train': (SEMDRONE, 'images', 'labels/png')}}

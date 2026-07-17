@@ -1,0 +1,31 @@
+# Data
+crops/
+datasets/
+harmonized/
+finetune/images/
+finetune/labels/
+
+# Models
+checkpoints/*.pt
+*.pt
+mobileclip*.ts
+yolo26n.pt
+
+# Training output
+runs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Docs
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db

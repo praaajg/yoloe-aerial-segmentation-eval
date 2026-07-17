@@ -1,0 +1,9 @@
+path: C:/Users/X/Desktop/X/seg/finetune
+train: images/train
+val: images/val
+test:
+
+names:
+  0: road
+  1: water
+  2: forest
